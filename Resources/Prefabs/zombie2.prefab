@@ -291,6 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 6
-  vel: 10
+  vel: 12
   dano: 1
+  clip: {fileID: 0}
   chefe: 0

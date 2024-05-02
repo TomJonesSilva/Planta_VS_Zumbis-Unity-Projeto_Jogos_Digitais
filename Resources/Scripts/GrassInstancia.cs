@@ -18,7 +18,7 @@ public class GrassInstancia : MonoBehaviour
             if (i % 9 == 0 && i != 0)
             {
                 newLine = true;
-                currentY = grass.transform.position.y - distanceY; // Aqui há um problema, grass ainda não foi instanciado
+                currentY = grass.transform.position.y - distanceY; 
             }
             if (newLine)
             {

@@ -293,3 +293,5 @@ MonoBehaviour:
   life: 12
   vel: 6
   dano: 1
+  clip: {fileID: 0}
+  chefe: 0

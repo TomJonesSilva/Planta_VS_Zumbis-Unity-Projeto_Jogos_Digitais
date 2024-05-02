@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpanwZumbies : MonoBehaviour
 {
     public GameObject[] zombieTypes;
+    public AudioClip clip;
     private int numberOfZombies = 4;
     private float minX = 11.5f;
     private float maxX = 15.5f;
@@ -79,9 +80,10 @@ public class SpanwZumbies : MonoBehaviour
     }
         
     void SpawnChefe(){
+        AudioSource.PlayClipAtPoint(clip,Camera.main.transform.position);
         float randomY = positionY[Random.Range(0, positionY.Length)];
 
-        Vector3 spawnPosition = new Vector3(11.5f, randomY, 0f);
+        Vector3 spawnPosition = new Vector3(13f, randomY, 0f);
         
         GameObject zombie =   Instantiate(zombieTypes[2],spawnPosition, Quaternion.identity);
         zombie.GetComponent<ZombiesScript>().QtdzombiesWave(numberOfZombies);

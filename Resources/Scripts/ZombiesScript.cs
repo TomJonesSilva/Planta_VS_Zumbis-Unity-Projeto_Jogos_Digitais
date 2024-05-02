@@ -6,10 +6,14 @@ using UnityEngine;
 public class ZombiesScript : MonoBehaviour
 {
     public float life, vel,dano;
+    private AudioSource sound;
+    public AudioClip clip;
+
     private bool conWalk, canEat;
     private Rigidbody2D rb;
     private Animator anim;
-    private AudioSource sound;
+
+    
     private SpriteRenderer sp;
     public bool chefe = false;
     private EscurecerTelaScript escurecerTela;
@@ -30,6 +34,7 @@ public class ZombiesScript : MonoBehaviour
         
         if(chefe){ 
         InvokeRepeating("CheckPlantsInCorridors",60f,60f);
+        
         }
     }
 
@@ -153,6 +158,7 @@ public class ZombiesScript : MonoBehaviour
         }
         
         sp.sortingOrder = -4;
+        AudioSource.PlayClipAtPoint(clip,Camera.main.transform.position);
         escurecerTela.IniciarEscurecimento(4f,1f);
         transform.position = new Vector2(transform.position.x, corredorSelecionado);
         Invoke("ReativarZumbi",5f);

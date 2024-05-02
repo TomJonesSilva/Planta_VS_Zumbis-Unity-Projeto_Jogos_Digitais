@@ -170,6 +170,7 @@ MonoBehaviour:
   life: 120
   vel: 6
   dano: 1
+  clip: {fileID: 8300000, guid: dc56eb12eb95ee6418afe8457eabe811, type: 3}
   chefe: 1
 --- !u!50 &2516879395391018972
 Rigidbody2D:

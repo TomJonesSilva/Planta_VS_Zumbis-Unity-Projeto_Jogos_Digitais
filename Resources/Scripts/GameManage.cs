@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManage : MonoBehaviour
 {
+   //public AudioClip clip;
    public GameObject prefabSun;
    public Transform pointSun;
    public static int cash;
@@ -12,8 +13,9 @@ public class GameManage : MonoBehaviour
     void Start()
     {
         InvokeRepeating("InstantiateSun", 10, 20);
-        cash = 900;
+        cash = 2000;
         shovelEnabled = false;
+     //   AudioSource.PlayClipAtPoint(clip,Camera.main.transform.position);
     }
 
    void Update(){

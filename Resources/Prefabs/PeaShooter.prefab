@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 4620079241585466387}
   m_Layer: 6
   m_Name: PeaShooter
-  m_TagString: Untagged
+  m_TagString: Plants
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
