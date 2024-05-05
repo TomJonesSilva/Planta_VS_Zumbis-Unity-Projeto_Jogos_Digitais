@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61cb524b5b8c2f048a3752f8475c0630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 120
+  life: 60
   vel: 6
   dano: 1
   clip: {fileID: 8300000, guid: dc56eb12eb95ee6418afe8457eabe811, type: 3}

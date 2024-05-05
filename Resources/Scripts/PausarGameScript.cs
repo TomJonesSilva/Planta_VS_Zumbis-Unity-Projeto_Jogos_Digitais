@@ -5,7 +5,8 @@ using UnityEngine;
 public class PausarGameScript : MonoBehaviour
 {
   private bool isPaused = false;
-
+  public GameObject huds;
+  
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P)) // Se pressionar a tecla P
@@ -33,11 +34,13 @@ public class PausarGameScript : MonoBehaviour
     void PauseGame()
     {
         Time.timeScale = 0; // Pausa o jogo
+        huds.SetActive(false);
 
     }
 
-    void ResumeGame()
+   public void ResumeGame()
     {
         Time.timeScale = 1; // Retoma o jogo
+        huds.SetActive(true);
     }
 }

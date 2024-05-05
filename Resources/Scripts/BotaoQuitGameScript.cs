@@ -22,9 +22,9 @@ public class BotaoQuitGameScript : MonoBehaviour
     void OnMouseDown()
     {
         
-       // Application.Quit();
+        Application.Quit();
        //UnityEditor.EditorApplication.isPlaying = false;
-       Time.timeScale = 0;
+       //Time.timeScale = 0;
        
      
 

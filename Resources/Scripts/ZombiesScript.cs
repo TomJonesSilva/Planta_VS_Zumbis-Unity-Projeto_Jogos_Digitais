@@ -33,7 +33,7 @@ public class ZombiesScript : MonoBehaviour
         
         
         if(chefe){ 
-        InvokeRepeating("CheckPlantsInCorridors",60f,60f);
+        InvokeRepeating("CheckPlantsInCorridors",20f,40f);
         
         }
     }

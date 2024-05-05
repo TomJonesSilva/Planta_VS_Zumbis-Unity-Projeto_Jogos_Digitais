@@ -38,7 +38,7 @@ public class SpanwZumbies : MonoBehaviour
         timeSinceLastWave = 0.0f;
        
         StartCoroutine(SpawnZombiesWithDelay(delay)); 
-         if(numberOfZombies % 10 == 0){ 
+         if(numberOfZombies % 5 == 0){ 
             SpawnChefe();
         }
         if(numberOfZombies < 31)      
@@ -88,14 +88,14 @@ public class SpanwZumbies : MonoBehaviour
         GameObject zombie =   Instantiate(zombieTypes[2],spawnPosition, Quaternion.identity);
         zombie.GetComponent<ZombiesScript>().QtdzombiesWave(numberOfZombies);
 
-        /*
+        
         if (numberOfZombies % 5 == 0 || (numberOfZombies -1) % 5==0)
         {
-            zombie.GetComponent<ZombiesScript>().vel += contadorChefe;
-            zombie.GetComponent<ZombiesScript>().life += numberOfZombies;
-            contadorChefe +=2;
+        
+            zombie.GetComponent<ZombiesScript>().life += contadorChefe;
+            contadorChefe +=20;
         }
-        */
+        
        
     }
 

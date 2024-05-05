@@ -13,7 +13,7 @@ public class GameManage : MonoBehaviour
     void Start()
     {
         InvokeRepeating("InstantiateSun", 10, 20);
-        cash = 2000;
+        cash = 50;
         shovelEnabled = false;
      //   AudioSource.PlayClipAtPoint(clip,Camera.main.transform.position);
     }
