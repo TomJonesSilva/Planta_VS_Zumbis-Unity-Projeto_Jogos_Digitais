@@ -118,7 +118,7 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 22
     m_FontStyle: 3
     m_Alignment: 4
     m_WordWrap: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  normalizedPosition: {x: 0.162, y: 0}
+  targetObject: {fileID: 4154464868805960031, guid: 5ded7727f7b2ab94b948c2ae36af414e, type: 3}
 --- !u!114 &2878289354898506265
 MonoBehaviour:
   m_ObjectHideFlags: 0

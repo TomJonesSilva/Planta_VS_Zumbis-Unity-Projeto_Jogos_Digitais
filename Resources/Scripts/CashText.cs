@@ -1,16 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CashText : MonoBehaviour
 {
     public GUIStyle style;
-    public Vector2 normalizedPosition = new Vector2(0.162f, 0f); // Posição normalizada na tela
-
+    public GameObject targetObject; // Objeto alvo cujas coordenadas serão usadas para posicionar o texto
+    
     void OnGUI()
     {
-        Vector2 position = new Vector2(normalizedPosition.x * Screen.width, normalizedPosition.y * Screen.height);
-        GUI.Label(new Rect(position.x, position.y, 50, 100), GameManage.cash.ToString(), style);
+        if (targetObject != null)
+        {
+            // Obter a posição do objeto alvo na tela
+            Vector3 targetPosition = Camera.main.WorldToScreenPoint(targetObject.transform.position);
+
+            // Renderizar o texto na mesma posição do objeto alvo
+            float textWidth = 50; // Largura fixa do texto
+            float textHeight = 100; // Altura fixa do texto
+
+            // Calcular a posição do texto para coincidir com a posição do objeto alvo na tela
+            float posX = targetPosition.x - (textWidth / 2); // Centralizar horizontalmente o texto em relação ao objeto alvo
+            float posY = Screen.height - targetPosition.y - (textHeight / 2); // Centralizar verticalmente o texto em relação ao objeto alvo
+
+            // Renderizar o texto na tela usando GUI.Label
+            GUI.Label(new Rect(posX, posY, textWidth, textHeight), GameManage.cash.ToString(), style);
+        }
     }
 }
